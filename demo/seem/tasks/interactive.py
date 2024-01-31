@@ -182,7 +182,7 @@ def interactive_infer_image(model, audio_model, image, tasks, refimg=None, reftx
     res = demo.get_image()
     torch.cuda.empty_cache()
     # return Image.fromarray(res), stroke_inimg, stroke_refimg
-    return Image.fromarray(res), None
+    return Image.fromarray(res), out_txt
 
 def interactive_infer_video(model, audio_model, image, tasks, refimg=None, reftxt=None, audio_pth=None, video_pth=None):
     if 'Video' in tasks:

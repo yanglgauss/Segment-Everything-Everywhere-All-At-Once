@@ -42,12 +42,12 @@ opt = init_distributed(opt)
 # META DATA
 cur_model = 'None'
 if 'focalt' in cfg.conf_files:
-    pretrained_pth = os.path.join("seem_focalt_v0.pt")
+    pretrained_pth = os.path.join("/data/DataSSD1/yli/SEEM/ckpt/seem_focalt_v0.pt")
     if not os.path.exists(pretrained_pth):
         os.system("wget {}".format("https://huggingface.co/xdecoder/SEEM/resolve/main/seem_focalt_v0.pt"))
     cur_model = 'Focal-T'
 elif 'focal' in cfg.conf_files:
-    pretrained_pth = os.path.join("seem_focall_v0.pt")
+    pretrained_pth = os.path.join("/data/DataSSD1/yli/SEEM/ckpt/seem_focall_v0.pt")
     if not os.path.exists(pretrained_pth):
         os.system("wget {}".format("https://huggingface.co/xdecoder/SEEM/resolve/main/seem_focall_v0.pt"))
     cur_model = 'Focal-L'

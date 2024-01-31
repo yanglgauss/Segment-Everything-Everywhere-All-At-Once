@@ -8,7 +8,7 @@
 # Define Test/Trainer/Saving
 PIPELINE: XDecoderPipeline
 TRAINER: xdecoder
-SAVE_DIR: '../../data/output/test'
+SAVE_DIR: '/data/DataSSD1/yli/SEEM/output/'
 base_path: "./"
 
 # Resume Logistic
@@ -53,7 +53,7 @@ MODEL:
     AUTOGRESSIVE: True
   BACKBONE:
     NAME: vit
-    PRETRAINED: '/nobackup3/xueyan-data/grin_data/output/sam/sam_vit_b_01ec64.pth'
+    PRETRAINED: '/data/DataSSD1/yli/SEEM/ckpt/sam_vit_b_01ec64.pth'
     LOAD_PRETRAINED: true
     VIT:
       SIZE: "base"
